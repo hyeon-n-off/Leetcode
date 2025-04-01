@@ -8,4 +8,5 @@ class Solution:
         if n >= k:
             nums[:] = nums[-k:] + nums[:-k]
         else:
-            nums[:] = nums[-(k - n):] + nums[:-(k - n)]
+            r = (k - n) % n
+            nums[:] = nums[-r:] + nums[:-r]
